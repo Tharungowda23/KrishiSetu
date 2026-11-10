@@ -1,4 +1,4 @@
-# KrishiSetu (कृषिसेतु) — Agricultural Marketplace
+# KrishiSetu  — Agricultural Marketplace
 
 > **Tagline:** “Connect. Compare. Sell Smarter.”
 
