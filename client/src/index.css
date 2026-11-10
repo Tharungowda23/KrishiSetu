@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-agritext-main font-sans selection:bg-forest selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-agritext-main;
+  }
+}
+
+@layer components {
+  /* Primary buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-forest hover:bg-forest-light text-white font-medium shadow-sm transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Secondary outline buttons */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-white border border-agriborder hover:bg-cream text-agritext-main font-medium shadow-sm transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Subtle ghost button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-agritext-secondary hover:text-forest hover:bg-agrigreen-100 transition-colors duration-150;
+  }
+
+  /* Badges */
+  .badge-green {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-agrigreen-100 text-forest border border-agrigreen-200;
+  }
+
+  .badge-yellow {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200;
+  }
+
+  .badge-red {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-rose-50 text-agrierror border border-rose-200;
+  }
+
+  .badge-gray {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200;
+  }
+
+  .badge-blue {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200;
+  }
+
+  /* Standard Card */
+  .card {
+    @apply bg-white rounded-xl border border-agriborder shadow-card transition-shadow duration-200;
+  }
+
+  .card-hover {
+    @apply hover:shadow-card-hover hover:border-agrigreen-200;
+  }
+
+  /* Input styles */
+  .input-field {
+    @apply w-full px-3.5 py-2.5 bg-white border border-agriborder rounded-lg text-agritext-main placeholder:text-agritext-muted focus:outline-none focus:ring-2 focus:ring-forest focus:border-forest transition-all duration-150;
+  }
+
+  .label-text {
+    @apply block text-sm font-semibold text-agritext-main mb-1.5;
+  }
+}
