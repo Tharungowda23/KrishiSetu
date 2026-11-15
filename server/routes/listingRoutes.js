@@ -10,7 +10,7 @@ const {
   getFarmerListings,
 } = require('../controllers/listingController');
 const { protect, authorize } = require('../middleware/auth');
-const upload = require('../middleware/upload');
+const { upload, persistUploads } = require('../middleware/upload');
 
 // Farmer specific listing retrieval
 router.get('/farmer/mine', protect, authorize('farmer'), getFarmerListings);
@@ -21,7 +21,7 @@ router.get('/featured', getFeaturedListings);
 router.get('/:id', getListingById);
 
 // Farmer only listing creation & management
-router.post('/', protect, authorize('farmer'), upload.array('images', 5), createListing);
+router.post('/', protect, authorize('farmer'), upload.array('images', 5), persistUploads, createListing);
 router.patch('/:id', protect, authorize('farmer', 'admin'), updateListing);
 router.delete('/:id', protect, authorize('farmer', 'admin'), deleteListing);
 

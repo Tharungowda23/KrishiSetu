@@ -190,9 +190,11 @@ exports.createListing = async (req, res) => {
       });
     }
 
-    // Images array: support uploaded files if any, or provided URLs
+    // Images array: support Cloudinary uploads, local disk uploads, or provided URLs
     let imageList = [];
-    if (req.files && req.files.length > 0) {
+    if (req.uploadedImageUrls && req.uploadedImageUrls.length > 0) {
+      imageList = req.uploadedImageUrls;
+    } else if (req.files && req.files.length > 0) {
       imageList = req.files.map((file) => `/uploads/${file.filename}`);
     } else if (images && Array.isArray(images)) {
       imageList = images;

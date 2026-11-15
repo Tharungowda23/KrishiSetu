@@ -21,17 +21,28 @@ const { getFarmerListings } = require('./controllers/listingController');
 
 const app = express();
 
+if (process.env.NODE_ENV === 'production') {
+  app.set('trust proxy', 1);
+}
+
 // Middleware
-const allowedOrigin = process.env.CLIENT_ORIGIN || 'http://localhost:5173';
+const isProduction = process.env.NODE_ENV === 'production';
+const allowedOrigins = (process.env.CLIENT_ORIGIN || 'http://localhost:5173')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
 app.use(
   cors({
     origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps, curl, Postman) or matching origin
-      if (!origin || origin === allowedOrigin || origin.startsWith('http://localhost:')) {
-        callback(null, true);
-      } else {
-        callback(null, true); // Dev flexible
+      // Allow requests with no origin (mobile apps, curl, server-to-server) and whitelisted origins
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
       }
+      if (!isProduction && origin.startsWith('http://localhost:')) {
+        return callback(null, true);
+      }
+      return callback(new Error(`Origin ${origin} is not allowed by CORS`));
     },
     credentials: true,
   })

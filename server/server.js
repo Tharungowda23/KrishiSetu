@@ -8,6 +8,11 @@ const PORT = process.env.PORT || 5000;
 
 async function startServer() {
   try {
+    if (process.env.NODE_ENV === 'production' && !process.env.JWT_SECRET) {
+      console.error('[KrishiSetu] Fatal: JWT_SECRET must be set in production.');
+      process.exit(1);
+    }
+
     // 1. Connect to MongoDB (MongoDB initialization before listening)
     await connectDB();
 

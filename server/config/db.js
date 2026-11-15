@@ -10,15 +10,20 @@ const connectDB = async () => {
 
   const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/krishisetu';
   const forceMemory = process.env.USE_MEMORY_DB === 'true';
+  const isProduction = process.env.NODE_ENV === 'production';
 
   if (!forceMemory) {
     try {
       const conn = await mongoose.connect(uri, {
-        serverSelectionTimeoutMS: 3000,
+        serverSelectionTimeoutMS: 10000,
       });
       console.log(`[KrishiSetu] MongoDB Connected: ${conn.connection.host}`);
       return conn;
     } catch (err) {
+      if (isProduction) {
+        console.error(`[KrishiSetu] Fatal: MongoDB connection failed in production: ${err.message}`);
+        process.exit(1);
+      }
       console.warn(`[KrishiSetu] Standard MongoDB connection failed (${err.message}). Falling back to MongoMemoryServer for development...`);
     }
   }
