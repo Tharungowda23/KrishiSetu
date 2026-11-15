@@ -230,15 +230,15 @@ $$\text{Estimated Net Earnings} = \text{Gross Sale Value} - \text{Total Expenses
 ### 4. Demonstrating the Net Earnings Differentiator
 For 10 quintals of produce:
 - **Buyer A (Nearby Hub):**
-  - Gross bid: ₹2,500/quintal = ₹25,000 gross
+  - Gross bid: ₹2,150/quintal = ₹21,500 gross
   - Short haul freight: ₹2,000
-  - **Estimated Net Earnings: ₹23,000** ⭐ *(Winner)*
+  - **Estimated Net Earnings: ₹19,500** ⭐ *(Winner)*
 - **Buyer B (Distant Mandi):**
-  - Gross bid: ₹2,700/quintal = ₹27,000 gross
+  - Gross bid: ₹2,300/quintal = ₹23,000 gross
   - Long haul freight: ₹5,000
-  - **Estimated Net Earnings: ₹22,000**
+  - **Estimated Net Earnings: ₹18,000**
 
-KrishiSetu flags Buyer A as yielding **+₹1,000 higher net profit** despite having a lower gross offer.
+KrishiSetu flags Buyer A as yielding **+₹1,500 higher net profit** despite having a lower gross offer.
 
 ---
 

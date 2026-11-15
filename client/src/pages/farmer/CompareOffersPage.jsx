@@ -202,7 +202,7 @@ const CompareOffersPage = () => {
         >
           {listings.map((l) => (
             <option key={l._id} value={l._id}>
-              {l.cropName} ({formatRupee(l.askingPrice)}/{l.priceUnit}) â€” {l.offersCount || 0} offers
+              {l.cropName} ({formatRupee(l.askingPrice)}/{l.priceUnit}) — {l.offersCount || 0} offers
             </option>
           ))}
         </select>
@@ -233,7 +233,7 @@ const CompareOffersPage = () => {
                   {isBest && (
                     <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-forest text-white text-[11px] font-extrabold flex items-center gap-1.5 shadow-md">
                       <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span>â˜… Highest Estimated Net Return</span>
+                      <span>★ Highest Estimated Net Return</span>
                     </div>
                   )}
 
@@ -246,7 +246,7 @@ const CompareOffersPage = () => {
                         </h3>
                       </div>
                       <p className="text-xs text-agritext-secondary mt-0.5">
-                        {offer.buyerId?.location?.district || 'Karnataka'} â€¢ {offer.buyerId?.businessDetails?.businessType || 'Trader'}
+                        {offer.buyerId?.location?.district || 'Karnataka'} • {offer.buyerId?.businessDetails?.businessType || 'Trader'}
                       </p>
                       {offer.buyerId?.verificationStatus === 'verified' && (
                         <span className="inline-flex items-center gap-1 text-[11px] font-bold text-forest mt-1">
@@ -307,7 +307,7 @@ const CompareOffersPage = () => {
                       <div className="p-3 bg-agrigreen-50 rounded-xl space-y-2 text-xs">
                         <div>
                           <label className="text-[10px] text-agritext-secondary font-medium">
-                            Transportation Freight (â‚¹)
+                            Transportation Freight (₹)
                           </label>
                           <input
                             type="number"
@@ -320,7 +320,7 @@ const CompareOffersPage = () => {
                         </div>
                         <div>
                           <label className="text-[10px] text-agritext-secondary font-medium">
-                            Packaging / Crates (â‚¹)
+                            Packaging / Crates (₹)
                           </label>
                           <input
                             type="number"
@@ -333,7 +333,7 @@ const CompareOffersPage = () => {
                         </div>
                         <div>
                           <label className="text-[10px] text-agritext-secondary font-medium">
-                            Labor Loading / Weighing (â‚¹)
+                            Labor Loading / Weighing (₹)
                           </label>
                           <input
                             type="number"
@@ -385,7 +385,7 @@ const CompareOffersPage = () => {
                       {formatRupee(netEarnings)}
                     </span>
                     <span className="text-[10px] text-agrigreen-200/90 block">
-                      Formula: {formatRupee(gross)} gross âˆ’ {formatRupee(totalExpenses)} expenses
+                      Formula: {formatRupee(gross)} gross − {formatRupee(totalExpenses)} expenses
                     </span>
                   </div>
 

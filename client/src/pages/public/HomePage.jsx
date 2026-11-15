@@ -95,7 +95,7 @@ const HomePage = () => {
                   <span className="text-xs text-agritext-secondary font-medium">Direct Connection</span>
                 </div>
                 <div>
-                  <span className="text-xl sm:text-2xl font-black text-forest block">â‚¹0</span>
+                  <span className="text-xl sm:text-2xl font-black text-forest block">₹0</span>
                   <span className="text-xs text-agritext-secondary font-medium">Hidden Commissions</span>
                 </div>
                 <div>
@@ -131,7 +131,7 @@ const HomePage = () => {
                 </div>
                 <div className="text-xs">
                   <span className="font-bold text-agritext-main block">Transparent Comparison</span>
-                  <span className="text-agritext-secondary">Highest price â‰  highest profit. Check transport cost first!</span>
+                  <span className="text-agritext-secondary">Highest price ≠ highest profit. Check transport cost first!</span>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@ const HomePage = () => {
             <div className="bg-white rounded-2xl p-6 border-2 border-forest shadow-md relative">
               <div className="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-forest text-white text-xs font-bold flex items-center gap-1 shadow-sm">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>+â‚¹1,000 Higher Net Profit</span>
+                <span>+₹1,500 Higher Net Profit</span>
               </div>
               <h3 className="text-lg font-bold text-forest mb-1">Buyer A (Nearby Hub)</h3>
               <p className="text-xs text-agritext-secondary mb-4">
@@ -232,22 +232,22 @@ const HomePage = () => {
 
               <div className="space-y-2.5 text-xs text-agritext-main border-y border-agriborder py-3 mb-4">
                 <div className="flex justify-between">
-                  <span className="text-agritext-secondary">Gross Offer (10 quintals @ â‚¹2,500):</span>
-                  <span className="font-semibold">â‚¹25,000</span>
+                  <span className="text-agritext-secondary">Gross Offer (10 quintals @ ₹2,150):</span>
+                  <span className="font-semibold">₹21,500</span>
                 </div>
                 <div className="flex justify-between text-agrierror">
                   <span>Estimated Transport & Logistics:</span>
-                  <span className="font-semibold">-â‚¹2,000</span>
+                  <span className="font-semibold">-₹2,000</span>
                 </div>
                 <div className="flex justify-between text-agritext-secondary">
                   <span>Other Deductions:</span>
-                  <span className="font-semibold">â‚¹0</span>
+                  <span className="font-semibold">₹0</span>
                 </div>
               </div>
 
               <div className="flex items-center justify-between bg-agrigreen-100 p-3.5 rounded-xl">
                 <span className="text-xs font-bold text-forest">Estimated Net Earnings</span>
-                <span className="text-xl font-extrabold text-forest">â‚¹23,000</span>
+                <span className="text-xl font-extrabold text-forest">₹19,500</span>
               </div>
             </div>
 
@@ -263,22 +263,22 @@ const HomePage = () => {
 
               <div className="space-y-2.5 text-xs text-agritext-main border-y border-agriborder py-3 mb-4">
                 <div className="flex justify-between">
-                  <span className="text-agritext-secondary">Gross Offer (10 quintals @ â‚¹2,700):</span>
-                  <span className="font-semibold">â‚¹27,000</span>
+                  <span className="text-agritext-secondary">Gross Offer (10 quintals @ ₹2,300):</span>
+                  <span className="font-semibold">₹23,000</span>
                 </div>
                 <div className="flex justify-between text-agrierror">
                   <span>Estimated Transport & Logistics:</span>
-                  <span className="font-semibold">-â‚¹5,000</span>
+                  <span className="font-semibold">-₹5,000</span>
                 </div>
                 <div className="flex justify-between text-agritext-secondary">
                   <span>Other Deductions:</span>
-                  <span className="font-semibold">â‚¹0</span>
+                  <span className="font-semibold">₹0</span>
                 </div>
               </div>
 
               <div className="flex items-center justify-between bg-gray-100 p-3.5 rounded-xl">
                 <span className="text-xs font-bold text-agritext-secondary">Estimated Net Earnings</span>
-                <span className="text-xl font-extrabold text-agritext-main">â‚¹22,000</span>
+                <span className="text-xl font-extrabold text-agritext-main">₹18,000</span>
               </div>
             </div>
           </div>

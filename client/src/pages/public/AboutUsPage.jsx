@@ -22,7 +22,7 @@ const AboutUsPage = () => {
           <h2 className="text-lg font-bold text-agritext-main">The Agricultural Dilemma</h2>
         </div>
         <p className="text-xs sm:text-sm text-agritext-secondary leading-relaxed">
-          When produce is harvested, farmers receive offers from various buyers, village traders, and regional APMC brokers. A broker in a distant city might quote ₹2,700 per quintal, while a nearby distributor offers ₹2,500. Without transparent freight calculation tools, farmers frequently choose the higher gross quote, only to discover later that freight deductions, unloading charges, and travel expenses left them with less money in hand.
+          When produce is harvested, farmers receive offers from various buyers, village traders, and regional APMC brokers. A broker in a distant city might quote ₹2,300 per quintal, while a nearby distributor offers ₹2,150. Without transparent freight calculation tools, farmers frequently choose the higher gross quote, only to discover later that freight deductions, unloading charges, and travel expenses left them with less money in hand.
         </p>
         <p className="text-xs sm:text-sm text-agritext-secondary leading-relaxed">
           High gross figures frequently conceal low net margins.
